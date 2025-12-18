@@ -2,9 +2,10 @@ import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 
 
-export const user = sqliteTable("post", {
+export const projets = sqliteTable("projets", {
   id: text("id").primaryKey(),
   title: text("title"),
+  imagelink: text("imagelink"),
   description: text("description"),
 
   createdAt: integer("created_at", { mode: "timestamp_ms" })

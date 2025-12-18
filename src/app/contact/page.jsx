@@ -1,14 +1,14 @@
 import React from 'react'
-import Accueil from './_components/Accueil'
+import AboutMe from '../_components/AboutMe'
 
 const page = () => {
   return (
     <div>
-      <Accueil />
+    
+      <AboutMe />
+
     </div>
   )
 }
-
-
 
 export default page
