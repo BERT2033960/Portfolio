@@ -25,12 +25,13 @@ const Accueil = () => {
 
             <p className="text-lg md:text-xl text-neutral-300 max-w-2xl">
               Je cree des systemes fiables, performants et maintenables,
-              specialises dans la logique serveur et les bases de donnees.
+              specialises dans la logique serveur et la gestion de bases
+              de donnees.
             </p>
 
             <div className="flex gap-4 pt-4">
               <Link
-                href="/projets"
+                href="/projet"
                 className="rounded-md bg-emerald-500 px-6 py-3 text-sm font-semibold text-black hover:bg-emerald-400 transition"
               >
                 Voir mes projets
@@ -55,9 +56,9 @@ const Accueil = () => {
 
         <p className="text-neutral-300 leading-relaxed max-w-3xl">
           Etudiant en developpement web, je me specialise en backend et en
-          conception de systemes solides. J’aime travailler avec des bases
-          de donnees, structurer des APIs claires et construire des
-          applications fiables.
+          conception de systemes robustes. J’aime travailler avec des bases
+          de donnees, concevoir des APIs claires et construire des
+          applications fiables et maintenables.
         </p>
       </section>
 

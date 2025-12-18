@@ -29,6 +29,20 @@
       "when": 1766095568632,
       "tag": "0003_high_sharon_ventura",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1766097892144,
+      "tag": "0004_gray_iron_lad",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1766098833057,
+      "tag": "0005_striped_steel_serpent",
+      "breakpoints": true
     }
   ]
 }

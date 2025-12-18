@@ -4,7 +4,9 @@ import Link from "next/link";
 
 const PageProjet = ({ project }) => {
   return (
-    <article className="mx-auto max-w-3xl">
+    <article className="mx-auto max-w-3xl px-6 py-12">
+
+      {/* retour */}
       <Link
         href="/projet"
         className="mb-6 inline-block text-sm text-neutral-400 hover:text-emerald-400 transition"
@@ -12,11 +14,34 @@ const PageProjet = ({ project }) => {
         ← Retour aux projets
       </Link>
 
-      <h1 className="mb-4 text-3xl font-semibold">
+      {/* titre */}
+      <h1 className="mb-2 text-3xl font-semibold">
         {project.title}
       </h1>
 
-      <div className="mb-6 overflow-hidden rounded-lg border border-neutral-800">
+      {/* mini description */}
+      {project.minidescription && (
+        <p className="mb-6 text-neutral-400">
+          {project.minidescription}
+        </p>
+      )}
+
+      {/* lien externe */}
+      {project.lien && (
+        <div className="mb-6">
+          <a
+            href={project.lien}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-md border border-emerald-500 px-4 py-2 text-sm text-emerald-400 hover:bg-emerald-500 hover:text-black transition"
+          >
+            Voir le projet
+          </a>
+        </div>
+      )}
+
+      {/* image */}
+      <div className="mb-8 overflow-hidden rounded-lg border border-neutral-800">
         <img
           src={project.imagelink}
           alt={project.title}
@@ -24,13 +49,23 @@ const PageProjet = ({ project }) => {
         />
       </div>
 
-      <p className="leading-relaxed text-neutral-300">
+      {/* description longue */}
+      <p className="leading-relaxed text-neutral-300 whitespace-pre-line">
         {project.description}
       </p>
 
-      <div className="mt-8 border-t border-neutral-800 pt-4 text-sm text-neutral-500 font-mono">
-        Projet backend — API, base de données, authentification
-      </div>
+      {/* technologies */}
+      {project.technoutilises && (
+        <div className="mt-10 border-t border-neutral-800 pt-4">
+          <p className="text-sm text-neutral-400 mb-1">
+            Technologies utilisees
+          </p>
+          <p className="text-sm font-mono text-neutral-300">
+            {project.technoutilises}
+          </p>
+        </div>
+      )}
+
     </article>
   );
 };

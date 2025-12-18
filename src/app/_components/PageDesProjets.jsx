@@ -36,7 +36,7 @@ const PageDesProjets = async () => {
                 </h3>
 
                 <p className="text-sm text-neutral-400 line-clamp-3">
-                  {p.description}
+                  {p.minidescription}
                 </p>
 
                 <span className="mt-2 font-mono text-xs text-neutral-500">
