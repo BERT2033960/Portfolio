@@ -18,7 +18,7 @@ const Header = () => {
             Projets
           </Link>
           <Link href="/contact" className="hover:text-emerald-400 transition">
-            Contact
+            À propos
           </Link>
         </nav>
       </div>
