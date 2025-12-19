@@ -18,7 +18,7 @@ export const authUser = sqliteTable("user", {
     .notNull(),
 });
 
-export const session = sqliteTable("session", {
+export const session = sqliteTable("session", { 
   id: text("id").primaryKey(),
   expiresAt: integer("expires_at", { mode: "timestamp_ms" }).notNull(),
   token: text("token").notNull().unique(),
