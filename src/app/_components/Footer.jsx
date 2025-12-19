@@ -1,6 +1,7 @@
 // src/app/_components/Footer.jsx
 import React from "react";
 import Contact from "./Contact";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -14,6 +15,12 @@ const Footer = () => {
             <p className="text-neutral-500">
               Backend Web Developer
             </p>
+            <Link
+              href="./contact"
+              className="hover:text-emerald-400 transition font-mono text-xs"
+            >
+              Mon CV
+            </Link>
           </div>
 
           <Contact />

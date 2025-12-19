@@ -18,6 +18,13 @@ const Contact = () => {
       >
         github
       </a>
+      <a
+        href="https://www.linkedin.com/in/thomas-berube02"
+        target="_blank"
+        className="hover:text-emerald-400 transition font-mono"
+      >
+        linkedin
+      </a>
     </div>
   );
 };
