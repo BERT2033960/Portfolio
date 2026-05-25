@@ -1,11 +1,17 @@
 // src/_components/PageDesProjets.js
+
 import React from "react";
 import { db } from "../../db/index.js";
 import { projets } from "../../db/schemas/schema.js";
+import { desc } from "drizzle-orm";
 import Link from "next/link";
 
 const PageDesProjets = async () => {
-  const allProjects = await db.select().from(projets).all();
+  const allProjects = await db
+    .select()
+    .from(projets)
+    .orderBy(desc(projets.id))
+    .all();
 
   return (
     <section>
