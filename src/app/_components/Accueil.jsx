@@ -55,10 +55,8 @@ const Accueil = () => {
         </h2>
 
         <p className="text-neutral-300 leading-relaxed max-w-3xl">
-          Étudiant en développement web, je me spécialise en backend et en
-          conception de systèmes robustes. J’aime travailler avec des bases
-          de données, concevoir des APIs claires et construire des
-          applications fiables et maintenables.
+Développeur logiciel diplômé en Techniques d’Intégration Multimédia, je me spécialise en développement backend et en conception de systèmes robustes. J’apprécie particulièrement le travail avec les bases de données, la conception d’API performantes et le développement d’applications fiables, sécurisées et maintenables.
+
         </p>
       </section>
 
