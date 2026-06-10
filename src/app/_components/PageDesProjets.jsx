@@ -12,7 +12,7 @@ const PageDesProjets = async () => {
   const allProjects = await db
   .select()
   .from(projets)
-.orderBy(asc(projets.ordreAsc))
+.orderBy(desc(projets.ordreAsc))
   .all();
   return (
     <section>
