@@ -10,7 +10,7 @@ const PageDesProjets = async () => {
   const allProjects = await db
     .select()
     .from(projets)
-    .orderBy(desc(projets.id))
+    .orderBy(asc(projets.ordreAsc))
     .all();
 
   return (
