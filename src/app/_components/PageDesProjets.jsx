@@ -3,14 +3,14 @@
 import React from "react";
 import { db } from "../../db/index.js";
 import { projets } from "../../db/schemas/schema.js";
-import { asc } from "drizzle-orm";
+import { asc, desc } from "drizzle-orm";
 import Link from "next/link";
 
 const PageDesProjets = async () => {
   const allProjects = await db
     .select()
     .from(projets)
-    .orderBy(asc(projets.ordreAsc))
+    .orderBy(desc(projets.ordreAsc))
     .all();
 
   return (
