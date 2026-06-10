@@ -3,14 +3,14 @@
 import React from "react";
 import { db } from "../../db/index.js";
 import { projets } from "../../db/schemas/schema.js";
-import { desc } from "drizzle-orm";
+import { desc, asc } from "drizzle-orm";
 import Link from "next/link";
 
 const PageDesProjets = async () => {
   const allProjects = await db
     .select()
     .from(projets)
-    .orderBy(asc(projets.ordreAsc))
+    .orderBy(asc(projets.ordre_asc))
     .all();
 
   return (
@@ -23,7 +23,7 @@ const PageDesProjets = async () => {
         {allProjects.map((p) => (
           <Link
             key={p.id}
-            href={`/projet/${p.id}`}
+            href={`/projet/${p.ordre_asc}`}
             className="group"
           >
             <article className="flex h-full flex-col overflow-hidden rounded-lg border border-neutral-800 bg-neutral-950 transition hover:border-emerald-500/50">
