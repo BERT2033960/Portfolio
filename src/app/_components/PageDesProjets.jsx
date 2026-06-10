@@ -7,12 +7,13 @@ import { desc, asc } from "drizzle-orm";
 import Link from "next/link";
 
 const PageDesProjets = async () => {
-  const allProjects = await db
-    .select()
-    .from(projets)
-    .orderBy(asc(projets.ordre_asc))
-    .all();
 
+
+  const allProjects = await db
+  .select()
+  .from(projets)
+  .orderBy(asc(projets.ordreAsc))
+  .all();
   return (
     <section>
       <h1 className="mb-8 text-3xl font-semibold">
@@ -23,7 +24,7 @@ const PageDesProjets = async () => {
         {allProjects.map((p) => (
           <Link
             key={p.id}
-            href={`/projet/${p.ordre_asc}`}
+href={`/projet/${p.ordreAsc}`}
             className="group"
           >
             <article className="flex h-full flex-col overflow-hidden rounded-lg border border-neutral-800 bg-neutral-950 transition hover:border-emerald-500/50">
