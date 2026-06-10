@@ -3,17 +3,16 @@
 import React from "react";
 import { db } from "../../db/index.js";
 import { projets } from "../../db/schemas/schema.js";
-import { desc, asc } from "drizzle-orm";
+import { asc } from "drizzle-orm";
 import Link from "next/link";
 
 const PageDesProjets = async () => {
-
-
   const allProjects = await db
-  .select()
-  .from(projets)
-.orderBy(desc(projets.ordreAsc))
-  .all();
+    .select()
+    .from(projets)
+    .orderBy(asc(projets.ordreAsc))
+    .all();
+
   return (
     <section>
       <h1 className="mb-8 text-3xl font-semibold">
@@ -24,11 +23,11 @@ const PageDesProjets = async () => {
         {allProjects.map((p) => (
           <Link
             key={p.id}
-href={`/projet/${p.ordreAsc}`}
+            href={`/projet/${p.id}`}
             className="group"
           >
             <article className="flex h-full flex-col overflow-hidden rounded-lg border border-neutral-800 bg-neutral-950 transition hover:border-emerald-500/50">
-              
+
               <div className="aspect-video overflow-hidden bg-neutral-900">
                 <img
                   src={p.imagelink}
