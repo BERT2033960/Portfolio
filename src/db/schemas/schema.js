@@ -16,4 +16,5 @@ export const projets = sqliteTable("projets", {
     .default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
     .$onUpdate(() => /* @__PURE__ */ new Date())
     .notNull(),
+  ordreAsc: interger("int"),
 });
